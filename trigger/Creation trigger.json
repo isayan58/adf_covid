@@ -1,0 +1,17 @@
+{
+	"name": "Creation trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 1,
+				"startTime": "2022-11-29T00:15:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
