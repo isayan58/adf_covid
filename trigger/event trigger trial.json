@@ -1,0 +1,24 @@
+{
+	"name": "event trigger trial",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_ingest_population_data",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/population/blobs/population_by_age.tsv.gz",
+			"ignoreEmptyBlobs": false,
+			"scope": "/subscriptions/0a35b22d-7a96-474a-bf5b-35915b45e4a7/resourceGroups/covid-reporting/providers/Microsoft.Storage/storageAccounts/sayancovidreport",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"name": "covid-repo-adf-58",
+	"properties": {
+		"globalConfigurations": {
+			"PipelineBillingEnabled": "true"
+		}
+	},
+	"location": "centralindia"
+}
