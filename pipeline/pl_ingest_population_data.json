@@ -179,7 +179,7 @@
 										"referenceName": "ls_az_blob_covid_1",
 										"type": "LinkedServiceReference"
 									},
-									"path": ""
+									"path": "$logs"
 								},
 								"enableLogging": true,
 								"storeSettings": {
