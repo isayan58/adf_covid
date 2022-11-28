@@ -19,6 +19,10 @@
 			"type": "string",
 			"defaultValue": "https://sayancoviddatalake.dfs.core.windows.net/"
 		},
+		"event trigger trial_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/0a35b22d-7a96-474a-bf5b-35915b45e4a7/resourceGroups/covid-reporting/providers/Microsoft.Storage/storageAccounts/sayancovidreport"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -54,6 +58,9 @@
 					},
 					"ls_az_data_lakecovid_58_properties_typeProperties_url": {
 						"value": "[parameters('ls_az_data_lakecovid_58_properties_typeProperties_url')]"
+					},
+					"event trigger trial_properties_typeProperties_scope": {
+						"value": "[parameters('event trigger trial_properties_typeProperties_scope')]"
 					}
 				}
 			},

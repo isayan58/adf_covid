@@ -18,6 +18,10 @@
 		"ls_az_data_lakecovid_58_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://sayancoviddatalake.dfs.core.windows.net/"
+		},
+		"event trigger trial_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/0a35b22d-7a96-474a-bf5b-35915b45e4a7/resourceGroups/covid-reporting/providers/Microsoft.Storage/storageAccounts/sayancovidreport"
 		}
 	},
 	"variables": {
@@ -319,6 +323,36 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_population_raw_gz')]",
 				"[concat(variables('factoryId'), '/datasets/ds_population_raw_tsv')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/event trigger trial')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "pl_ingest_population_data",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
+					}
+				],
+				"type": "BlobEventsTrigger",
+				"typeProperties": {
+					"blobPathBeginsWith": "/population/blobs/population_by_age.tsv.gz",
+					"ignoreEmptyBlobs": false,
+					"scope": "[parameters('event trigger trial_properties_typeProperties_scope')]",
+					"events": [
+						"Microsoft.Storage.BlobCreated"
+					]
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/pl_ingest_population_data')]"
 			]
 		}
 	]
