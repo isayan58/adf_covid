@@ -14,5 +14,9 @@
     {
         "sourceRelativeURL": "cloudboxacademy/covid19/blob/main/ecdc_data/case_deaths_uk_ind_only.csv",
         "sinkFileName": "case_deaths_uk_ind_only.csv"
+    },
+    {
+        "sourceRelativeURL": "cloudboxacademy/covid19/blob/main/ecdc_data/testing.csv",
+        "sinkFileName": "testing.csv"
     }
 ]
