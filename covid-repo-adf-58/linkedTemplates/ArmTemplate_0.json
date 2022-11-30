@@ -583,7 +583,7 @@
 				"typeProperties": {
 					"recurrence": {
 						"frequency": "Minute",
-						"interval": 1,
+						"interval": 30,
 						"startTime": "2022-12-01T02:12:00",
 						"timeZone": "India Standard Time"
 					}
