@@ -356,6 +356,40 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/ds_ecdc_file_list')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_az_blob_covid_1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Json",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "ecdc_files_list.json",
+						"container": "configs"
+					}
+				},
+				"schema": {
+					"type": "object",
+					"properties": {
+						"sourceRelativeURL": {
+							"type": "string"
+						},
+						"sinkFileName": {
+							"type": "string"
+						}
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_az_blob_covid_1')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/ds_ecdc_population_http')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
