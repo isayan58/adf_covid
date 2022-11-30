@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy cases and deaths data",
+				"name": "Copy ecdc data",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -50,11 +50,11 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_population_http",
+						"referenceName": "ds_ecdc_population_http",
 						"type": "DatasetReference",
 						"parameters": {
 							"relativeURL": {
-								"value": "@variables('sourceRelativeURL')",
+								"value": "@pipeline().parameters.sourceRelativeURL",
 								"type": "Expression"
 							}
 						}
@@ -62,11 +62,11 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_population_http_target",
+						"referenceName": "ds_ecdc_population_http_target",
 						"type": "DatasetReference",
 						"parameters": {
 							"filename": {
-								"value": "@variables('sinkFileName')",
+								"value": "@pipeline().parameters.sinkFileName",
 								"type": "Expression"
 							}
 						}
@@ -74,6 +74,14 @@
 				]
 			}
 		],
+		"parameters": {
+			"sourceRelativeURL": {
+				"type": "string"
+			},
+			"sinkFileName": {
+				"type": "string"
+			}
+		},
 		"variables": {
 			"sourceRelativeURL": {
 				"type": "String",
