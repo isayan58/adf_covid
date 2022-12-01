@@ -8,10 +8,6 @@
 				"pipelineReference": {
 					"referenceName": "pl_cases_deaths_data",
 					"type": "PipelineReference"
-				},
-				"parameters": {
-					"sourceRelativeURL": "cloudboxacademy/covid19/blob/main/ecdc_data/hospital_admissions.csv",
-					"sinkFileName": "hospital_adm.csv"
 				}
 			}
 		],
