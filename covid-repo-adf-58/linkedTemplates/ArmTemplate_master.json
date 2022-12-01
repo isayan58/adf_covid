@@ -21,7 +21,7 @@
 		},
 		"ls_http_ecdc_covid_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "https://github.com/"
+			"defaultValue": "@{linkedService().sourceBaseURL}"
 		},
 		"event trigger trial_properties_typeProperties_scope": {
 			"type": "string",
