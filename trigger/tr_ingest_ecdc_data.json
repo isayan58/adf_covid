@@ -1,5 +1,5 @@
 {
-	"name": "tr_ingest_hospital_admission_data",
+	"name": "tr_ingest_ecdc_data",
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Started",
@@ -8,19 +8,15 @@
 				"pipelineReference": {
 					"referenceName": "pl_cases_deaths_data",
 					"type": "PipelineReference"
-				},
-				"parameters": {
-					"sourceRelativeURL": "cloudboxacademy/covid19/blob/main/ecdc_data/hospital_admissions.csv",
-					"sinkFileName": "hospital_adm.csv"
 				}
 			}
 		],
 		"type": "ScheduleTrigger",
 		"typeProperties": {
 			"recurrence": {
-				"frequency": "Minute",
-				"interval": 30,
-				"startTime": "2022-12-01T02:12:00",
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2022-12-01T17:29:00",
 				"timeZone": "India Standard Time"
 			}
 		}

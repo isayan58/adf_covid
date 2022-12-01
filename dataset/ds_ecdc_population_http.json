@@ -2,11 +2,20 @@
 	"name": "ds_ecdc_population_http",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_http_ecdc_covid",
-			"type": "LinkedServiceReference"
+			"referenceName": "ls_ecdc_http",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"baseURL": {
+					"value": "@dataset().baseURL",
+					"type": "Expression"
+				}
+			}
 		},
 		"parameters": {
 			"relativeURL": {
+				"type": "string"
+			},
+			"baseURL": {
 				"type": "string"
 			}
 		},
