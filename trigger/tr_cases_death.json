@@ -1,0 +1,17 @@
+{
+	"name": "tr_cases_death",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 2,
+				"startTime": "2022-12-03T03:55:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
