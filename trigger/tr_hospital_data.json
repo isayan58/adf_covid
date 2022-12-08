@@ -1,0 +1,17 @@
+{
+	"name": "tr_hospital_data",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 2,
+				"startTime": "2022-12-09T03:20:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
