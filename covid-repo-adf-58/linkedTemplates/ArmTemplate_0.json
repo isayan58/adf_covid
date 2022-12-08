@@ -92,7 +92,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"folderPath": "ecdc/HospitalData",
+						"folderPath": "ecdc/HospitalDailyData",
 						"fileSystem": "processed"
 					},
 					"columnDelimiter": ",",
@@ -120,10 +120,11 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"folderPath": "ecdc/HospitalData",
+						"folderPath": "ecdc/HospitalWeelyData",
 						"fileSystem": "processed"
 					},
 					"columnDelimiter": ",",
+					"compressionCodec": "gzip",
 					"escapeChar": "\\",
 					"firstRowAsHeader": true,
 					"quoteChar": "\""

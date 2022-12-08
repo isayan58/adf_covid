@@ -512,7 +512,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"folderPath": "ecdc/HospitalData",
+						"folderPath": "ecdc/HospitalDailyData",
 						"fileSystem": "processed"
 					},
 					"columnDelimiter": ",",
@@ -540,10 +540,11 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"folderPath": "ecdc/HospitalData",
+						"folderPath": "ecdc/HospitalWeelyData",
 						"fileSystem": "processed"
 					},
 					"columnDelimiter": ",",
+					"compressionCodec": "gzip",
 					"escapeChar": "\\",
 					"firstRowAsHeader": true,
 					"quoteChar": "\""
@@ -1104,7 +1105,7 @@
 				"type": "ScheduleTrigger",
 				"typeProperties": {
 					"recurrence": {
-						"frequency": "Minute",
+						"frequency": "Hour",
 						"interval": 30,
 						"startTime": "2022-12-03T03:55:00",
 						"timeZone": "India Standard Time"
