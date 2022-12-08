@@ -1,12 +1,12 @@
 {
-	"name": "tr_cases_death",
+	"name": "tr_hospital_data",
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Started",
 		"pipelines": [
 			{
 				"pipelineReference": {
-					"referenceName": "pl_process_cases_deaths",
+					"referenceName": "pl_hospital_data",
 					"type": "PipelineReference"
 				}
 			}
@@ -14,9 +14,9 @@
 		"type": "ScheduleTrigger",
 		"typeProperties": {
 			"recurrence": {
-				"frequency": "Hour",
-				"interval": 30,
-				"startTime": "2022-12-03T03:55:00",
+				"frequency": "Day",
+				"interval": 2,
+				"startTime": "2022-12-09T03:20:00",
 				"timeZone": "India Standard Time"
 			}
 		}
