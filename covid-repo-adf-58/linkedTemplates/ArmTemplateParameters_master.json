@@ -11,8 +11,14 @@
 		"ls_az_data_lakecovid_58_accountKey": {
 			"value": ""
 		},
+		"ls_db_covid_cluster_accessToken": {
+			"value": ""
+		},
 		"ls_az_data_lakecovid_58_properties_typeProperties_url": {
 			"value": "https://sayancoviddatalake.dfs.core.windows.net/"
+		},
+		"ls_db_covid_cluster_properties_typeProperties_existingClusterId": {
+			"value": "1210-192543-m43hvs6v"
 		},
 		"ls_ecdc_http_properties_typeProperties_url": {
 			"value": "@{linkedService().baseURL}"

@@ -15,9 +15,17 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ls_az_data_lakecovid_58'"
 		},
+		"ls_db_covid_cluster_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'ls_db_covid_cluster'"
+		},
 		"ls_az_data_lakecovid_58_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://sayancoviddatalake.dfs.core.windows.net/"
+		},
+		"ls_db_covid_cluster_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "1210-192543-m43hvs6v"
 		},
 		"ls_ecdc_http_properties_typeProperties_url": {
 			"type": "string",
@@ -60,8 +68,14 @@
 					"ls_az_data_lakecovid_58_accountKey": {
 						"value": "[parameters('ls_az_data_lakecovid_58_accountKey')]"
 					},
+					"ls_db_covid_cluster_accessToken": {
+						"value": "[parameters('ls_db_covid_cluster_accessToken')]"
+					},
 					"ls_az_data_lakecovid_58_properties_typeProperties_url": {
 						"value": "[parameters('ls_az_data_lakecovid_58_properties_typeProperties_url')]"
+					},
+					"ls_db_covid_cluster_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('ls_db_covid_cluster_properties_typeProperties_existingClusterId')]"
 					},
 					"ls_ecdc_http_properties_typeProperties_url": {
 						"value": "[parameters('ls_ecdc_http_properties_typeProperties_url')]"
